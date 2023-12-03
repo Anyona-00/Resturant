@@ -5,19 +5,24 @@
 body{
     margin: 0;
     padding: 0;
+    background: url("https://cdn.mos.cms.futurecdn.net/F9gD5hvUSeAaYt5h4MiJzb.jpg") no-repeat center center fixed; 
+  background-size: cover; 
 }
 
 .navbar{
     display: flex;
     justify-content: space-between;
-    background-color: black;
+    background-color: none;
 }
 
 
 .brand{
     color: white;
-    font-size: xx-large;
+    font-size: 2.5rem;
     margin-left: 2rem;
+    margin-top: 1rem;
+    cursor: grab;
+    
 }
 
 
@@ -34,15 +39,38 @@ body{
 padding: 2rem;
 }
 
-.nav-links li:hover{
+/*.nav-links li:hover{
     background-color: rgb(100, 100, 100);
-}
+}*/
 
 
 .navbar a{
     text-decoration: none;
 color: rgb(255, 255, 255);
+text-transform: uppercase;
 
+}
+
+
+.nav-links li::after{
+    content: '';
+    background-color: navajowhite;
+    height: .3rem;
+    width: 100%;
+   display: block;
+  position: relative;
+  top: 1rem;
+  opacity: 0;
+  transition: all 0.2s;
+  
+  
+
+  
+}
+
+.nav-links li:hover::after
+{
+opacity: 1;
 }
 
 
@@ -50,7 +78,7 @@ color: rgb(255, 255, 255);
     width: 31px;
     height: 31px;
     position: absolute;
-    top: 0.5rem;
+    top: 2rem;
     right: 2rem;
     display: none;
     flex-direction: column;
@@ -67,6 +95,72 @@ color: rgb(255, 255, 255);
 }
 
 
+main{
+    margin-top: 7rem;
+}
+
+h1{
+    color: white;
+    margin-left: 6rem;
+    font-size: xx-large;
+}
+
+
+p{
+    color: white;
+    width: 35%;
+    margin-left: 6rem;
+    font-size:x-large;
+}
+
+
+.btn{
+    margin-top: 6rem;
+    margin-left: 6rem;
+    justify-content: space-between;
+}
+
+
+.menu{
+    width: 8rem;
+    height: 4rem;
+    border:2px solid navajowhite;
+    background-color: transparent;
+    color: white;
+    font-size: x-large;
+    margin-right: 2rem;
+
+    
+
+}
+
+.order,.menu{
+    width: 8rem;
+    height: 4rem;
+    border:2px solid navajowhite;
+    background-color: transparent;
+    color: white;
+    margin-right: 2rem;
+    font-size: x-large;
+    /* Initial background is red */
+    background: linear-gradient(to left, transparent 50%, rgb(197, 197, 202) 50%);
+    background-size: 200% 100%;
+    background-position: right;
+    transition: all 2s ease;
+
+}
+
+
+  
+  .order:hover {
+    /* On hover, change background position to left */
+    background-position: left;
+  }
+  
+.menu:hover {
+    /* On hover, change background position to left */
+    background-position: left;
+  }
 
 @media (max-width:600px) {
 
@@ -107,6 +201,14 @@ color: rgb(255, 255, 255);
     .nav-links ul .active{
         display: flex;
     }
+
+p{
+    width: 60%;
+}
+
+.btn{
+    display: flex;
+}
 
 
 
