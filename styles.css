@@ -97,6 +97,7 @@ opacity: 1;
 
 main{
     margin-top: 7rem;
+
 }
 
 h1{
@@ -191,6 +192,7 @@ p{
     }
     .nav-links.active ul{
         display:flex;
+    
         
     }
     .toggle-button.active span:first-child{
